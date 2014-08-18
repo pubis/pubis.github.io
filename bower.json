@@ -5,6 +5,8 @@
   "authors": [
     "Jonas Lundqvist <lundqvist.j@gmail.com>"
   ],
+  "description": "github.pubis.se / pubis.github.io",
+  "main": "index.html",
   "license": "MIT",
   "private": true,
   "ignore": [
