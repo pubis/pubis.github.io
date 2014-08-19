@@ -39,6 +39,9 @@
   #title {
     margin: 0.5em;
   }
+  #tabs {
+    width: 300px;
+  }
   @media (min-width: 1200px) {
     .container {
       width: 80%;
@@ -52,7 +55,7 @@
   </style>
 </head>
 
-<body>
+<body unresolved>
   <core-header-panel>
     <div class="core-header">
       <div id="header" class="container" horizontal layout center>
@@ -60,6 +63,11 @@
         <a href="http://pubis.se"></a>
       </core-item>
       <div id="title" flex><h1>Pubis</h1></div>
+      <paper-tabs id="tabs" selected="all" self-end>
+        <paper-tab name="own">OWN</paper-tab>
+        <paper-tab name="forks">FORKS</paper-tab>
+        <paper-tab name="all">ALL</paper-tab>
+      </paper-tabs>
       <core-item icon="communication:email">
          <a href="mailto:lundqvist.j@gmail.com"></a>
       </core-item>
@@ -71,6 +79,15 @@
       </github-project-list>
     </div>
   </core-header-panel>
+
+  <script>
+  var list = document.querySelector('github-project-list');
+  var tabs = document.querySelector('paper-tabs');
+
+  tabs.addEventListener('core-select', function() {
+    list.show = tabs.selected;
+  });
+  </script>
 </body>
 
 </html>
