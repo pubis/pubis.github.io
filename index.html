@@ -2,13 +2,69 @@
 <html>
 
 <head>
-  <title>github.pubis.se</title>
+  <title>pubis@github</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/font-roboto/roboto.html">
+  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" hreF="bower_components/core-icon/core-icon.html">
+  <link rel="import" hreF="bower_components/core-icons/core-icons.html">
+  <link rel="import" hreF="bower_components/core-icons/maps-icons.html">
+  <link rel="import" href="bower_components/core-icons/communication-icons.html">
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="github-project-list.html">
+  <style>
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #e5e5e5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scolling: touch;
+  }
+  .core-header {
+    background: #03a9f4;
+    color: white;
+  }
+  #container {
+    width: 100%;
+  }
+  core-icon {
+    margin: 1em;
+  }
+  .core-header :last-child {
+    margin-right: 2em;
+  }
+  #title {
+    margin: 0.5em;
+  }
+  @media (min-width: 481px) {
+    #container {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  </style>
 </head>
 
 <body>
-
-  <h2>Hi there!</h2>
-
+  <core-header-panel>
+    <div class="core-header">
+      <div id="container" horizontal layout center>
+      <core-icon icon="maps:location-history"></core-icon>
+      <div id="title" flex><h1>Pubis</h1></div>
+      <core-icon icon="communication:email"></core-icon>
+      </div>
+    </div>
+    <div id="container">
+      <github-project-list>
+      </github-project-list>
+    </div>
+  </core-header-panel>
 </body>
 
 </html>
