@@ -7,10 +7,9 @@
   <script src="bower_components/platform/platform.js"></script>
   <link rel="import" href="bower_components/font-roboto/roboto.html">
   <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
-  <link rel="import" hreF="bower_components/core-icon/core-icon.html">
-  <link rel="import" hreF="bower_components/core-icons/core-icons.html">
   <link rel="import" hreF="bower_components/core-icons/maps-icons.html">
   <link rel="import" href="bower_components/core-icons/communication-icons.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
   <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
   <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="github-project-list.html">
@@ -30,26 +29,23 @@
     background: #03a9f4;
     color: white;
   }
-  #container {
-    width: 100%;
-    margin: 0 auto;
-  }
-  core-icon {
+  core-item {
     margin: 1em;
   }
-  .core-header :last-child {
-    margin-right: 2em;
+  .container {
+    width: 100%;
+    margin: 0 auto;
   }
   #title {
     margin: 0.5em;
   }
   @media (min-width: 1200px) {
-    #container {
+    .container {
       width: 80%;
     }
   }
   @media (min-width: 481px) and (max-width: 1200px) {
-    #container {
+    .container {
       width: 90%;
     }
   }
@@ -59,13 +55,18 @@
 <body>
   <core-header-panel>
     <div class="core-header">
-      <div id="container" horizontal layout center>
-      <core-icon icon="maps:location-history"></core-icon>
+      <div id="header" class="container" horizontal layout center>
+      <core-item icon="home">
+        <a href="http://pubis.se"></a>
+      </core-item>
       <div id="title" flex><h1>Pubis</h1></div>
-      <core-icon icon="communication:email"></core-icon>
+      <core-item icon="communication:email">
+         <a href="mailto:lundqvist.j@gmail.com"></a>
+      </core-item>
+      </a>
       </div>
     </div>
-    <div id="container">
+    <div class="container">
       <github-project-list>
       </github-project-list>
     </div>
