@@ -58,20 +58,21 @@
 <body unresolved>
   <core-header-panel>
     <div class="core-header">
-      <div id="header" class="container" horizontal layout center>
-      <core-item icon="home">
-        <a href="http://pubis.se"></a>
-      </core-item>
-      <div id="title" flex><h1>Pubis</h1></div>
-      <paper-tabs id="tabs" selected="all" self-end>
-        <paper-tab name="own">OWN</paper-tab>
-        <paper-tab name="forks">FORKS</paper-tab>
-        <paper-tab name="all">ALL</paper-tab>
-      </paper-tabs>
-      <core-item icon="communication:email">
-         <a href="mailto:lundqvist.j@gmail.com"></a>
-      </core-item>
-      </a>
+      <div id="header" class="container" horizontal justified layout center>
+        <div id="title"><h1>Pubis</h1></div>
+        <paper-tabs id="tabs" selected="all" self-end>
+          <paper-tab name="own">OWN</paper-tab>
+          <paper-tab name="forks">FORKS</paper-tab>
+          <paper-tab name="all">ALL</paper-tab>
+        </paper-tabs>
+        <div horizontal layout>
+          <core-item icon="home">
+            <a href="http://pubis.se"></a>
+          </core-item>
+          <core-item icon="communication:email">
+             <a href="mailto:lundqvist.j@gmail.com"></a>
+          </core-item>
+        </div>
       </div>
     </div>
     <div class="container">
