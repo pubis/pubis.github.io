@@ -1,0 +1,37 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="github-service.html">
+<link rel="import" href="github-project.html">
+
+<polymer-element name="github-project-list">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    github-project {
+      margin-bottom: 36px;
+      width: 400px;
+      border-radius: 6px
+    }
+    #list {
+      padding: 1em;
+      height: 100%;
+    }
+    </style>
+
+    <github-service id="service" projects="{{projects}}"></github-service>
+
+    <div id="list" horizontal justified layout wrap>
+      <template repeat="{{project in projects}}">
+        <github-project>
+          <h2>{{project.name}}</h2>
+          <p>{{project.description}}</p>
+        </github-project>
+      </template>
+    </div>
+  </template>
+  <script>
+  Polymer('github-project-list');
+  </script>
+</polymer-element>
